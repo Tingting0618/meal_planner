@@ -47,7 +47,7 @@ const addToShoppingList = (newObject) => {
 const new1 = {
     id: 0,
     name: "Banana",
-    price: 5,
+    price: 20,
     dateCreated: new Date()
 }
 // Create a new object
@@ -85,4 +85,31 @@ addToShoppingList(new3)
 addToShoppingList(new4)
 addToShoppingList(new5)
 
-console.log(shopping_items)
+//console.log(shopping_items)
+
+//------------------------------------------.
+//Method 1
+// const findExpensiveItems = () => {
+//     const expensiveItems = []  
+
+//     for (const itemObject of shopping_items) {
+//         if (itemObject.price>=8){
+//             expensiveItems.push(itemObject)
+//         }
+//     }
+//     return expensiveItems  
+// }
+// const expensiveItems = findExpensiveItems()
+
+// console.log(expensiveItems)
+
+//------------------------------------------.
+//Method 2
+const expensiveItems = []  
+
+for (const itemObject of shopping_items) {
+    if (itemObject.price>=8){
+        expensiveItems.push(itemObject)
+    }
+}
+console.log(expensiveItems)
